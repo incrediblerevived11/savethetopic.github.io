@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>
+			Topic Saver
+		</title>
+	</head>
+	<body>
+		<button onclick="set_()">Set All Topics</button>
+		<div class="area" id="a1">
+			<input id="a1_title" placeholder="Enter Topic">
+			<input id="a1_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a2">
+			<input id="a2_title" placeholder="Enter Topic">
+			<input id="a2_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a3">
+			<input id="a3_title" placeholder="Enter Topic">
+			<input id="a3_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a4">
+			<input id="a4_title" placeholder="Enter Topic">
+			<input id="a4_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a5">
+			<input id="a5_title" placeholder="Enter Topic">
+			<input id="a5_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a6">
+			<input id="a6_title" placeholder="Enter Topic">
+			<input id="a6_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a7">
+			<input id="a7_title" placeholder="Enter Topic">
+			<input id="a7_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a8">
+			<input id="a8_title" placeholder="Enter Topic">
+			<input id="a8_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a9">
+			<input id="a9_title" placeholder="Enter Topic">
+			<input id="a9_text" placeholder="Enter Text">
+		</div>
+		<div class="area" id="a10">
+			<input id="a10_title" placeholder="Enter Topic">
+			<input id="a10_text" placeholder="Enter Text">
+		</div>
+	</body>
+</html>
+
+<script>
+	load()
+
+	function load() {
+
+		g_("a1_title").value = localStorage.getItem("a1_title");
+		g_("a1_text").value = localStorage.getItem("a1_text");
+		g_("a2_title").value = localStorage.getItem("a2_title");
+		g_("a2_text").value = localStorage.getItem("a2_text");
+		g_("a3_title").value = localStorage.getItem("a3_title");
+		g_("a3_text").value = localStorage.getItem("a3_text");
+		g_("a4_title").value = localStorage.getItem("a4_title");
+		g_("a4_text").value = localStorage.getItem("a4_text");
+		g_("a5_title").value = localStorage.getItem("a5_title");
+		g_("a5_text").value = localStorage.getItem("a5_text");
+		g_("a6_title").value = localStorage.getItem("a6_title");
+		g_("a6_text").value = localStorage.getItem("a6_text");
+		g_("a7_title").value = localStorage.getItem("a7_title");
+		g_("a7_text").value = localStorage.getItem("a7_text");
+		g_("a8_title").value = localStorage.getItem("a8_title");
+		g_("a8_text").value = localStorage.getItem("a8_text");
+		g_("a9_title").value = localStorage.getItem("a9_title");
+		g_("a9_text").value = localStorage.getItem("a9_text");
+		g_("a10_title").value = localStorage.getItem("a10_title");
+		g_("a10_text").value = localStorage.getItem("a10_text");
+
+	}
+
+	function set_() {
+		
+		localStorage.setItem("done", "true")
+		setUp_("a1_title")
+		setUp_("a1_text")
+		setUp_("a2_title")
+		setUp_("a2_text")
+		setUp_("a3_title")
+		setUp_("a3_text")
+		setUp_("a4_title")
+		setUp_("a4_text")
+		setUp_("a5_title")
+		setUp_("a5_text")
+		setUp_("a6_title")
+		setUp_("a6_text")
+		setUp_("a7_title")
+		setUp_("a7_text")
+		setUp_("a8_title")
+		setUp_("a8_text")
+		setUp_("a9_title")
+		setUp_("a9_text")
+		setUp_("a10_title")
+		setUp_("a10_text")
+
+	}
+
+	function setUp_(id_) {
+
+		if (g_(id_) != null) {
+
+			localStorage.setItem(id_, g_(id_).value)
+
+		}
+
+	}
+	
+	function g_(in_) {
+
+		return document.getElementById(in_);
+
+	}
+</script>
